@@ -4,6 +4,7 @@ This is a fork of angular2gridster https://github.com/swiety85/angular2gridster,
 
 ## Versions:
 
+-   Version **15.x** works with **Angular 15.2**.
 -   Version **14.x** works with **Angular 14.x**.
 
 ## Installation

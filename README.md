@@ -1,32 +1,10 @@
 # angular2gridster
 
-[![npm version](https://badge.fury.io/js/angular2gridster.svg)](https://badge.fury.io/js/angular2gridster)
-
-Angular implementation of well known Gridster (no jQuery, no external libraries, only Angular and Rx.js). [Demo](https://swiety85.github.io/angular2gridster/).
-
-1. [Getting started](https://github.com/swiety85/angular2gridster/wiki/Getting-started)
-2. [What is Angular2gridster and why to use it?](https://github.com/swiety85/angular2gridster/wiki)
-3. [API Documentation](https://github.com/swiety85/angular2gridster/wiki/API-Documentation)
-4. [Roadmap](https://github.com/swiety85/angular2gridster/wiki/Roadmap)
-
-More comprehensive documentation is available in [Wiki](https://github.com/swiety85/angular2gridster/wiki).
-
-Development progress can be tracked in [Milestones](https://github.com/swiety85/angular2gridster/milestones) and in [Project board](https://github.com/swiety85/angular2gridster/projects/1).
+This is a fork of angular2gridster https://github.com/swiety85/angular2gridster, made to support Angular 14+ versions
 
 ## Versions:
 
--   Version **13.x** works with **Angular 13.x**.
--   Version **12.x** works with **Angular 12.x**.
--   Version **11.x** works with **Angular 11.x**.
--   Version **10.x** works with **Angular 10.x**.
--   Version **9.x** works with **Angular 9.x**.
--   Version **8.x** works with **Angular 8.x**.
--   Version **7.x** works with **Angular 7.x**.
--   Version **6.x** works with **Angular 6.x**.
--   Version **5.x** works with **Angular 5.x**.
--   Version **4.x** works with **Angular 4.x**.
-
-Versions **1.x** and **0.x** works only with **Angular 4.x**, but the newest states you can find in **v4.x**.
+-   Version **14.x** works with **Angular 14.x**.
 
 ## Installation
 
@@ -65,13 +43,13 @@ It requires change in `map` object and 'packages' as follows:
 System.config({
     map: {
         // ...
-        rxjs: 'node_modules/rxjs',
-        angular2gridster: 'node_modules/angular2gridster',
+        rxjs: "node_modules/rxjs",
+        angular2gridster: "node_modules/angular2gridster",
     },
     packages: {
         // ...
-        rxjs: {defaultExtension: 'js'},
-        angular2gridster: {main: 'dist/index.js', defaultExtension: 'js'},
+        rxjs: { defaultExtension: "js" },
+        angular2gridster: { main: "dist/index.js", defaultExtension: "js" },
     },
 });
 ```
@@ -80,13 +58,7 @@ System.config({
 
 ```html
 <ngx-gridster [options]="gridsterOptions" [draggableOptions]="{ handlerClass: 'panel-heading' }">
-    <ngx-gridster-item
-        *ngFor="let widget of widgets"
-        [(x)]="widget.x"
-        [(y)]="widget.y"
-        [(w)]="widget.w"
-        [(h)]="widget.h"
-    >
+    <ngx-gridster-item *ngFor="let widget of widgets" [(x)]="widget.x" [(y)]="widget.y" [(w)]="widget.w" [(h)]="widget.h">
         <!-- some content -->
     </ngx-gridster-item>
 </ngx-gridster>
@@ -96,13 +68,7 @@ For version before 6.0.0:
 
 ```html
 <gridster [options]="gridsterOptions" [draggableOptions]="{ handlerClass: 'panel-heading' }">
-    <gridster-item
-        *ngFor="let widget of widgets"
-        [(x)]="widget.x"
-        [(y)]="widget.y"
-        [(w)]="widget.w"
-        [(h)]="widget.h"
-    >
+    <gridster-item *ngFor="let widget of widgets" [(x)]="widget.x" [(y)]="widget.y" [(w)]="widget.w" [(h)]="widget.h">
         <!-- some content -->
     </gridster-item>
 </gridster>
